@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SnapFlow - Your visual workspace for capturing, annotating, and organizing screenshots on Windows.">
+    <title>SnapFlow App - Capture, Annotate, Organize</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="cursor-glow" class="cursor-glow"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo-container">
+                <img src="asset/logo.png" alt="SnapFlow Logo" class="nav-logo">
+                <span class="logo-text">SnapFlow</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#screenshots">Screenshots</a>
+                <button id="theme-toggle" aria-label="Toggle theme" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-container">
+            <div class="hero-content reveal">
+                <!-- Badge Windows -->
+                <div class="badge-group">
+                    <span class="badge"><i class="fab fa-windows"></i> Available for Windows 10 & 11</span>
+                    <!-- Nuovo badge per light/dark mode -->
+                    <span class="badge badge-light-dark"><i class="fas fa-palette"></i> Light & Dark mode</span>
+                </div>
+                <!-- Nuovo titolo -->
+                <h1>Your visual workspace for screenshots.</h1>
+                <p>Capture your screen, annotate with precision, extract text, and organize your ideas in smart folders. SnapFlow is more than a screenshot app, it's a complete visual workspace designed to streamline your workflow.</p>
+                
+                <div class="hero-actions">
+                    <a href="https://apps.microsoft.com/detail/9NCBT202FZZ8" target="_blank" class="store-button pulse-effect">
+                        <i class="fab fa-microsoft"></i>
+                        <span>Download free from the <strong>Microsoft Store</strong></span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper reveal delay-1">
+                <img src="asset/banner.png" alt="SnapFlow interface preview" class="hero-banner">
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <div class="section-header reveal">
+            <h2>Everything you need.</h2>
+            <p>A powerful alternative to the default system tool. Built for students, creators, and teams who want to capture and organize their screen seamlessly.</p>
+        </div>
+        
+        <div class="bento-grid">
+            
+            <!-- Card 1: Advanced Capture -->
+			<div class="bento-card reveal">
+				<div class="card-header">
+					<div class="card-icon color-blue"><i class="fas fa-crop-simple"></i></div>
+					<h3>Advanced Capture</h3>
+				</div>
+				<ul>
+					<li><strong>Multi-Monitor Support:</strong> Capture all your screens at once or pick a single monitor - perfect for multi-display setups.</li>
+					<li><strong>Window Capture:</strong> Take a screenshot of a specific application, even if it's partially hidden.</li>
+					<li><strong>Pixel-Perfect Selection:</strong> Use the built-in magnifier to select custom areas with absolute accuracy.</li>
+				</ul>
+			</div>
+
+            <!-- Card 2: Draw, Annotate & Hide -->
+			<div class="bento-card reveal delay-1">
+				<div class="card-header">
+					<div class="card-icon color-pink"><i class="fas fa-pen-nib"></i></div>
+					<h3>Draw, Annotate & Hide</h3>
+				</div>
+				<ul>
+					<li><strong>Vector Annotations:</strong> Add shapes, text, and freehand drawings. Text is fully editable – move, recolor, or delete it anytime. Drawings are smooth and can be erased effortlessly for quick corrections.</li>
+					<li><strong>Quick Numbering:</strong> Add numbered steps (1, 2, 3...) with a single click, alongside ready-to-use stamps.</li>
+					<li><strong>Instant Redaction:</strong> Quickly pixelate sensitive data like passwords or emails before sharing.</li>
+				</ul>
+				<div class="card-demo-gif">
+					<img src="asset/gif/censor.gif" alt="Redaction tool demo" class="demo-gif">
+				</div>
+			</div>
+
+            <!-- Card 3: Smart Storage -->
+			<div class="bento-card reveal">
+				<div class="card-header">
+					<div class="card-icon color-green"><i class="fas fa-folder-tree"></i></div>
+					<h3>Smart Storage</h3>
+				</div>
+				<ul>
+					<li><strong>Smart Folders:</strong> Attach actual files (like PDFs or documents) directly to your screenshot folders.</li>
+					<li><strong>Temporary Mode:</strong> Need a quick screenshot just to copy-paste? SnapFlow automatically deletes temporary snaps when closed.</li>
+					<li><strong>Drag & Drop:</strong> Move screenshots between folders with a simple drag. You can even drag them directly into other apps like WhatsApp, Slack, or your browser.</li>
+					<li><strong>Labels & Colors:</strong> Group your folders by project and assign custom colors for instant visual recognition.</li>
+				</ul>
+				<div class="card-demo-gif">
+					<img src="asset/gif/dragndrop.gif" alt="SnapFlow drag and drop demo" class="demo-gif">
+				</div>
+			</div>
+
+            <!-- Card 4: Pro Tools -->
+            <div class="bento-card reveal delay-1">
+                <div class="card-header">
+                    <div class="card-icon color-purple"><i class="fas fa-wand-magic-sparkles"></i></div>
+                    <h3>Pro Tools</h3>
+                </div>
+                <ul>
+                    <li>
+                        <strong>Markdown Notes:</strong> Write formatted notes on any screenshot, ideal for studying or meeting summaries.
+                        <div class="card-demo-gif mini-gif">
+                            <img src="asset/gif/markdown.gif" alt="Markdown notes demo" class="demo-gif">
+                        </div>
+                    </li>
+                    <li>
+                        <strong>OCR & Translation:</strong> Extract and copy text directly from images. Built-in translation included.
+                        <div class="card-demo-gif mini-gif">
+                            <img src="asset/gif/ocr_and_translate.gif" alt="OCR and translation demo" class="demo-gif">
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Powerful Export:</strong> Select multiple annotated screenshots and merge them into a single PDF.
+                        <div class="card-demo-gif mini-gif">
+                            <img src="asset/gif/export.gif" alt="PDF export demo" class="demo-gif">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bento-card card-highlight card-large reveal">
+                <div class="card-icon"><i class="fas fa-user-shield"></i></div>
+                <div class="card-info">
+                    <h3>100% Offline. Your data stays yours.</h3>
+                    <p>We know how sensitive your screen data can be. Text extraction (OCR) and all advanced features run <strong>securely on your local PC</strong>. No screenshots are ever sent to unknown servers. Work, annotate, and organize in complete privacy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="screenshots" class="screenshots">
+        <div class="section-header reveal">
+            <h2>Screenshots</h2>
+            <p>A look at SnapFlow’s clean interface and powerful tools.</p>
+        </div>
+        
+        <div class="gallery-grid reveal">
+            <div class="gallery-item"><img src="asset/screenshots/01.png" alt="Main Interface" class="lazy-thumb"><div class="viewfinder"></div></div>
+            <div class="gallery-item"><img src="asset/screenshots/02.png" alt="Image Editor and Tools" class="lazy-thumb"><div class="viewfinder"></div></div>
+            <div class="gallery-item"><img src="asset/screenshots/03.png" alt="Folders and Organization" class="lazy-thumb"><div class="viewfinder"></div></div>
+            <div class="gallery-item"><img src="asset/screenshots/04.png" alt="Markdown Notes" class="lazy-thumb"><div class="viewfinder"></div></div>
+            <div class="gallery-item"><img src="asset/screenshots/05.png" alt="OCR Text Extraction" class="lazy-thumb"><div class="viewfinder"></div></div>
+            <div class="gallery-item"><img src="asset/screenshots/06.png" alt="Sensitive Data Redaction" class="lazy-thumb"><div class="viewfinder"></div></div>
+            <div class="gallery-item"><img src="asset/screenshots/07.png" alt="Auto-Numbering Tool" class="lazy-thumb"><div class="viewfinder"></div></div>
+            <div class="gallery-item"><img src="asset/screenshots/08.png" alt="Settings Menu" class="lazy-thumb"><div class="viewfinder"></div></div>
+            <div class="gallery-item"><img src="asset/screenshots/09.png" alt="Dark Mode UI" class="lazy-thumb"><div class="viewfinder"></div></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-cta reveal">
+            <h2>Start working smarter today.</h2>
+            <a href="https://apps.microsoft.com/detail/9NCBT202FZZ8" target="_blank" class="store-button">
+                <i class="fab fa-microsoft"></i>
+                <span>Download now from the <strong>Microsoft Store</strong></span>
+            </a>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Kevin Paladino. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <dialog id="lightbox" class="lightbox">
+        <form method="dialog">
+            <button class="close-lightbox" aria-label="Close"><i class="fas fa-xmark"></i></button>
+        </form>
+        <img src="" alt="Enlarged preview" id="lightbox-img">
+    </dialog>
+
+    <script src="main.js"></script>
+</body>
+</html>
