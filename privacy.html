@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - SnapFlow</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .privacy-content { max-width: 800px; margin: 140px auto 80px auto; padding: 0 20px; }
+        .privacy-content h3 { font-size: 20px; color: var(--text-main); margin-top: 35px; margin-bottom: 15px; font-weight: 700; }
+        .privacy-content p { color: var(--text-muted); font-size: 16px; line-height: 1.7; margin-bottom: 20px; }
+        .privacy-content a { color: var(--accent); text-decoration: none; }
+        .privacy-content a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div id="cursor-glow" class="cursor-glow"></div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <img src="asset/logo.png" alt="SnapFlow Logo" class="nav-logo">
+                <span class="logo-text">SnapFlow</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Home</a>
+                <button id="theme-toggle" aria-label="Toggle theme" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="privacy-content">
+        <div class="section-header" style="text-align: left; margin-bottom: 50px;">
+            <h1 style="font-size: 42px; font-weight: 900; color: var(--text-main); margin-bottom: 10px; letter-spacing: -1px;">Privacy Policy</h1>
+            <p>Last updated: July 2026</p>
+        </div>
+
+        <h3>1. DATA CONTROLLER</h3>
+        <p>Kevin Paladino, email: <a href="mailto:snapflow@proton.me">snapflow@proton.me</a></p>
+
+        <h3>2. LOCALLY PROCESSED DATA</h3>
+        <p>By default, the SnapFlow application processes all data (screenshots, notes, settings, basic OCR) strictly locally on the user's computer. The Data Controller does not collect or store any personal or usage information.</p>
+
+        <h3>3. LOCAL DATA PROCESSING</h3>
+        <p>Some advanced features of SnapFlow, such as note text search and spell checking, are processed entirely locally on the user's device. No data related to these functions is transmitted to our servers or to third parties.</p>
+
+        <h3>4. PURCHASE AND PAYMENTS</h3>
+        <p>The software is distributed and sold via the Microsoft Store. Personal and payment data provided during the purchase are processed by Microsoft in accordance with its privacy policy (<a href="https://privacy.microsoft.com/" target="_blank">https://privacy.microsoft.com/</a>).</p>
+
+        <h3>5. THIRD-PARTY TRANSLATION SERVICES</h3>
+        <p>SnapFlow offers an optional text translation feature. If you explicitly choose to use it, the selected text is transmitted via API to Google Translate solely to generate the translation. We do not store or retain any copy of the translated text on our servers. Processing by Google is subject to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</p>
+
+        <h3>6. COOKIES AND TRACKING</h3>
+        <p>The application does not use cookies or any tracking technologies.</p>
+
+        <h3>7. USER RIGHTS (GDPR)</h3>
+        <p>Under the GDPR, you have the right to request access to, rectification, erasure, or restriction of processing of your personal data, as well as the right to data portability.</p>
+        <p>Because SnapFlow processes data locally on your device and does not retain any personal data or translation logs on external servers, we generally do not hold personal data to fulfill such requests. However, you may contact us at any time to verify our data processing practices or exercise your rights at: <a href="mailto:snapflow@proton.me">snapflow@proton.me</a>.</p>
+
+        <h3>8. CHANGES</h3>
+        <p>This policy may be updated. Changes will be published in the new version of the Software or communicated via the distribution platform.</p>
+
+        <h3>9. CONTACT</h3>
+        <p>For privacy questions, write to: <a href="mailto:snapflow@proton.me">snapflow@proton.me</a></p>
+    </main>
+
+    <footer class="footer" style="padding: 40px 20px;">
+        <div class="footer-bottom">
+            <p>&copy; 2026 Kevin Paladino. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const htmlElement = document.documentElement;
+            const themeToggle = document.getElementById('theme-toggle');
+            const icon = themeToggle.querySelector('i');
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            function setTheme(theme) {
+                htmlElement.setAttribute('data-theme', theme);
+                icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+                localStorage.setItem('theme', theme);
+            }
+
+            // Inizializza
+            const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+            setTheme(initialTheme);
+
+            // Toggle
+            themeToggle.addEventListener('click', () => {
+                const newTheme = htmlElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+                setTheme(newTheme);
+            });
+			
+			const cursorGlow = document.getElementById('cursor-glow');
+			if (cursorGlow) {
+				document.addEventListener('mousemove', (e) => {
+					cursorGlow.style.transform = `translate(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%))`;
+					cursorGlow.style.opacity = '0.12';
+				});
+				document.addEventListener('mouseenter', () => {
+					cursorGlow.style.opacity = '0.15';
+				});
+				document.addEventListener('mouseleave', () => {
+					cursorGlow.style.opacity = '0';
+				});
+			}
+
+        });
+    </script>
+</body>
+</html>

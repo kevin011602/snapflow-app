@@ -1,6 +1,3 @@
-/* ==========================================================================
-   VARIABLES & COLORS (Modern and Accessible Design)
-   ========================================================================== */
 :root {
     --bg-main: #f4f6fc;
     --bg-card: #ffffff;
@@ -132,7 +129,7 @@ body {
 }
 .bento-card:hover { transform: translateY(-6px); border-color: var(--accent); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1); }
 
-/* --- Nuovo header per card: icona + titolo affiancati --- */
+/* --- header per card: icona + titolo affiancati --- */
 .card-header {
     display: flex;
     align-items: center;
@@ -140,7 +137,7 @@ body {
     margin-bottom: 30px;
 }
 .card-header .card-icon {
-    margin-bottom: 0;  /* annullo margine precedente */
+    margin-bottom: 0;
     flex-shrink: 0;
 }
 .card-header h3 {
@@ -254,7 +251,6 @@ body {
     .section-header h2 { font-size: 32px; }
     .bento-card { padding: 30px; }
     .store-button { padding: 12px 24px; }
-    /* Su mobile l'header della card può andare in colonna se lo spazio è poco, ma resta affiancato */
     .card-header { gap: 15px; }
     .card-header h3 { font-size: 22px; }
 }
@@ -275,7 +271,7 @@ body {
     margin-top: -20px;
 }
 
-/* Effetto Carino / Tema Proton */
+/* Tema Proton */
 .proton-btn {
     position: relative;
     display: inline-flex;
